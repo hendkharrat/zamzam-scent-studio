@@ -1,24 +1,44 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { Hero } from "@/components/Hero";
+import { BestSellers } from "@/components/BestSellers";
+import { About } from "@/components/About";
+import { Benefits } from "@/components/Benefits";
+import { Experience } from "@/components/Experience";
+import { InstagramSection } from "@/components/InstagramSection";
+import { CTA } from "@/components/CTA";
+import { ProductDetails } from "@/components/ProductDetails";
+import type { Product } from "@/data/products";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Zam Zam Fragrances Canada — Luxury-Inspired Perfumes";
+const description =
+  "Discover your signature scent. Luxury-inspired fragrances in 30ml, 50ml and 100ml, curated in Vancouver, Canada.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  const [selected, setSelected] = useState<Product | null>(null);
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main>
+      <Hero />
+      <BestSellers onView={setSelected} />
+      <Experience />
+      <About />
+      <Benefits />
+      <InstagramSection />
+      <CTA />
+      <ProductDetails product={selected} onClose={() => setSelected(null)} />
+    </main>
   );
 }
