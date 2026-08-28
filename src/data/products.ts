@@ -361,13 +361,14 @@ function slug(name: string) {
     .replace(/(^-|-$)/g, "");
 }
 
-export const products: Product[] = seeds.map((seed, i) => ({
+export const products: Product[] = seeds.map((seed) => ({
   id: slug(seed.name),
   name: seed.name,
   family: seed.family,
   category: seed.category,
   bestSeller: Boolean(seed.bestSeller),
-  image: images[i % images.length]!,
+  image: bottleBySlug[slug(seed.name)] ?? fallbackBottle,
+
   description: seed.description,
   notes: { top: seed.top, heart: seed.heart, base: seed.bottom },
   sizes: sizes(seed.base),
