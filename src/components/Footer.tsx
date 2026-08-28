@@ -1,13 +1,18 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram } from "lucide-react";
+import { Instagram, Mail, Phone } from "lucide-react";
 import logo from "@/assets/zamzam-logo.jpg.asset.json";
 import {
   BRAND_LOCATION,
   BRAND_NAME,
   BRAND_TAGLINE,
+  EMAIL_ADDRESS,
+  EMAIL_URL,
   INSTAGRAM_HANDLE,
   INSTAGRAM_URL,
+  WHATSAPP_NUMBER,
+  WHATSAPP_URL,
 } from "@/data/brand";
+
 
 export function Footer() {
   return (
@@ -70,8 +75,23 @@ export function Footer() {
             >
               <Instagram className="h-4 w-4" /> {INSTAGRAM_HANDLE}
             </a>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="mt-3 flex items-center gap-2 text-[0.85rem] text-ivory/65 transition-colors hover:text-ivory"
+            >
+              <Phone className="h-4 w-4" /> {WHATSAPP_NUMBER}
+            </a>
+            <a
+              href={EMAIL_URL}
+              className="mt-3 flex items-center gap-2 text-[0.85rem] text-ivory/65 transition-colors hover:text-ivory"
+            >
+              <Mail className="h-4 w-4" /> {EMAIL_ADDRESS}
+            </a>
             <p className="mt-4 text-[0.85rem] text-ivory/50">{BRAND_LOCATION}</p>
           </div>
+
         </div>
 
         <div className="flex flex-col gap-3 pt-8 text-[0.7rem] text-ivory/40 sm:flex-row sm:items-center sm:justify-between">
