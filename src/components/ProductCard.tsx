@@ -33,6 +33,12 @@ export function ProductCard({
           />
         </button>
 
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 flex justify-center p-3 sm:p-4">
+          <span className="product-tag max-w-full truncate rounded-xs border border-gold/45 bg-navy-deep/65 px-3 py-2 text-center text-[0.58rem] tracking-[0.24em] text-ivory uppercase backdrop-blur-sm sm:px-4 sm:text-[0.62rem]">
+            {product.name}
+          </span>
+        </div>
+
         {product.bestSeller ? (
           <span className="absolute top-3 left-3 bg-burgundy px-3 py-1.5 text-[0.55rem] tracking-[0.24em] text-ivory uppercase">
             Best Seller

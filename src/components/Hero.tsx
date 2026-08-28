@@ -15,6 +15,37 @@ export function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,oklch(0.19_0.052_262/0.72)_70%)]" />
       <div className="absolute inset-0 bg-gradient-to-b from-navy-deep/85 via-navy-deep/45 to-navy-deep" />
 
+      {/* Ambient luxury atmosphere — purely decorative, sits behind content */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        <div className="ambient-orb-a absolute -top-24 left-[10%] h-[46vmax] w-[46vmax] rounded-full bg-[radial-gradient(circle,oklch(0.79_0.078_82/0.16)_0%,transparent_65%)] blur-3xl" />
+        <div className="ambient-orb-b absolute -bottom-32 right-[5%] h-[52vmax] w-[52vmax] rounded-full bg-[radial-gradient(circle,oklch(0.4_0.13_18/0.22)_0%,transparent_68%)] blur-3xl" />
+        <div className="ambient-orb-a absolute top-1/3 left-1/2 h-[38vmax] w-[38vmax] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,oklch(0.34_0.058_263/0.28)_0%,transparent_70%)] blur-3xl" />
+        <div className="ambient-rays absolute inset-0 bg-[linear-gradient(105deg,transparent_35%,oklch(0.79_0.078_82/0.07)_50%,transparent_65%)]" />
+        {[
+          { l: "8%", d: 0, u: 26, s: 3 },
+          { l: "21%", d: 6, u: 34, s: 2 },
+          { l: "34%", d: 12, u: 30, s: 4 },
+          { l: "47%", d: 3, u: 38, s: 2 },
+          { l: "59%", d: 16, u: 28, s: 3 },
+          { l: "71%", d: 9, u: 36, s: 2 },
+          { l: "84%", d: 20, u: 32, s: 3 },
+          { l: "93%", d: 14, u: 40, s: 2 },
+        ].map((m) => (
+          <span
+            key={m.l}
+            className="ambient-mote absolute bottom-0 rounded-full bg-gold/70 blur-[1px]"
+            style={{
+              left: m.l,
+              width: m.s,
+              height: m.s,
+              animationDelay: `${m.d}s`,
+              animationDuration: `${m.u}s`,
+            }}
+          />
+        ))}
+      </div>
+
+
       <div className="relative z-10 mx-auto w-full max-w-3xl px-6 pt-28 pb-24 text-center">
         <img
           src={logo}
