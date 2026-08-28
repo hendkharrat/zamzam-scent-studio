@@ -356,10 +356,13 @@ const seeds: Seed[] = [
 
 function slug(name: string) {
   return name
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
 }
+
 
 export const products: Product[] = seeds.map((seed) => ({
   id: slug(seed.name),
