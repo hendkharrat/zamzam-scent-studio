@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Mail, Phone } from "lucide-react";
-import logo from "@/assets/zamzam-logo.jpg.asset.json";
+import logo from "@/assets/zamzam-logo.jpg";
 import {
   BRAND_LOCATION,
   BRAND_NAME,
@@ -22,7 +22,7 @@ export function Footer() {
           <div>
             <div className="flex min-w-0 items-center gap-3">
               <img
-                src={logo.url}
+                src={logo}
                 alt={BRAND_NAME}
                 loading="lazy"
                 width={56}

@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import heroImage from "@/assets/hero.jpg";
-import logo from "@/assets/zamzam-logo.jpg.asset.json";
+import logo from "@/assets/zamzam-logo.jpg";
 
 export function Hero() {
   return (
@@ -17,7 +17,7 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-3xl px-6 pt-28 pb-24 text-center">
         <img
-          src={logo.url}
+          src={logo}
           alt="Zam Zam Fragrances Canada logo"
           width={140}
           height={140}

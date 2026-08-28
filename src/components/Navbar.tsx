@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Menu, ShoppingBag, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import logo from "@/assets/zamzam-logo.jpg.asset.json";
+import logo from "@/assets/zamzam-logo.jpg";
 import { useCart } from "@/lib/cart";
 import { INSTAGRAM_URL } from "@/data/brand";
 import { cn } from "@/lib/utils";
@@ -55,7 +55,7 @@ export function Navbar() {
           className="flex min-w-0 items-center gap-3"
         >
           <img
-            src={logo.url}
+            src={logo}
             alt="Zam Zam Fragrances Canada"
             width={48}
             height={48}
