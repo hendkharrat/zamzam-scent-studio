@@ -69,6 +69,42 @@ function ContactPage() {
                 </div>
               </li>
               <li className="flex min-w-0 items-start gap-4">
+                <Phone
+                  className="mt-0.5 h-5 w-5 shrink-0 text-burgundy"
+                  strokeWidth={1.3}
+                />
+                <div className="min-w-0">
+                  <p className="text-[0.65rem] tracking-[0.22em] text-muted-foreground uppercase">
+                    WhatsApp
+                  </p>
+                  <a
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="mt-1 block truncate text-[0.95rem] text-navy-deep underline-offset-4 hover:underline"
+                  >
+                    {WHATSAPP_NUMBER}
+                  </a>
+                </div>
+              </li>
+              <li className="flex min-w-0 items-start gap-4">
+                <Mail
+                  className="mt-0.5 h-5 w-5 shrink-0 text-burgundy"
+                  strokeWidth={1.3}
+                />
+                <div className="min-w-0">
+                  <p className="text-[0.65rem] tracking-[0.22em] text-muted-foreground uppercase">
+                    Email
+                  </p>
+                  <a
+                    href={EMAIL_URL}
+                    className="mt-1 block truncate text-[0.95rem] text-navy-deep underline-offset-4 hover:underline"
+                  >
+                    {EMAIL_ADDRESS}
+                  </a>
+                </div>
+              </li>
+              <li className="flex min-w-0 items-start gap-4">
                 <Instagram
                   className="mt-0.5 h-5 w-5 shrink-0 text-burgundy"
                   strokeWidth={1.3}
@@ -87,6 +123,7 @@ function ContactPage() {
                   </a>
                 </div>
               </li>
+
             </ul>
           </Reveal>
 
