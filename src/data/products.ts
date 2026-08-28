@@ -42,7 +42,7 @@ export interface Product {
   sizes: ProductSize[];
 }
 
-const images = [bottleNoir, bottleNavy, bottleBurgundy, bottleIvory];
+const fallbackBottle = Object.values(bottleBySlug)[0]!;
 
 function sizes(base: number): ProductSize[] {
   return [
