@@ -1,7 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Instagram, MapPin } from "lucide-react";
+import { Instagram, Mail, MapPin, Phone } from "lucide-react";
 import { toast } from "sonner";
-import { BRAND_LOCATION, INSTAGRAM_HANDLE, INSTAGRAM_URL } from "@/data/brand";
+import {
+  BRAND_LOCATION,
+  EMAIL_ADDRESS,
+  EMAIL_URL,
+  INSTAGRAM_HANDLE,
+  INSTAGRAM_URL,
+  WHATSAPP_NUMBER,
+  WHATSAPP_URL,
+} from "@/data/brand";
+
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { InstagramSection } from "@/components/InstagramSection";
