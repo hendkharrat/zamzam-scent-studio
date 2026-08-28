@@ -6,13 +6,19 @@ import { useCart } from "@/lib/cart";
 import { INSTAGRAM_URL } from "@/data/brand";
 import { cn } from "@/lib/utils";
 
-const links = [
+type NavLink = {
+  label: string;
+  to: "/" | "/shop" | "/about" | "/contact";
+  search?: { filter: "best" };
+};
+
+const links: NavLink[] = [
   { label: "Home", to: "/" },
   { label: "Shop", to: "/shop" },
   { label: "Best Sellers", to: "/shop", search: { filter: "best" } },
   { label: "About", to: "/about" },
   { label: "Contact", to: "/contact" },
-] as const;
+];
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -70,7 +76,7 @@ export function Navbar() {
             <li key={l.label}>
               <Link
                 to={l.to}
-                search={"search" in l ? (l.search as never) : undefined}
+                {...(l.search ? { search: l.search } : {})}
                 className="group relative text-[0.72rem] tracking-[0.24em] text-ivory/75 uppercase transition-colors hover:text-ivory"
               >
                 {l.label}
@@ -123,7 +129,7 @@ export function Navbar() {
             <li key={l.label}>
               <Link
                 to={l.to}
-                search={"search" in l ? (l.search as never) : undefined}
+                {...(l.search ? { search: l.search } : {})}
                 onClick={() => setOpen(false)}
                 className="block border-b border-ivory/10 py-4 font-display text-2xl text-ivory/90"
               >

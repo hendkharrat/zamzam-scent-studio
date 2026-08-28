@@ -13,11 +13,10 @@ const description =
 const validFilters: FilterKey[] = ["all", "men", "women", "unisex", "best"];
 
 export const Route = createFileRoute("/shop")({
-  validateSearch: (search: Record<string, unknown>) => ({
-    filter: validFilters.includes(search["filter"] as FilterKey)
-      ? (search["filter"] as FilterKey)
-      : ("all" as FilterKey),
-  }),
+  validateSearch: (search: Record<string, unknown>): { filter?: FilterKey } =>
+    validFilters.includes(search["filter"] as FilterKey)
+      ? { filter: search["filter"] as FilterKey }
+      : {},
   head: () => ({
     meta: [
       { title },
@@ -30,7 +29,7 @@ export const Route = createFileRoute("/shop")({
 });
 
 function Shop() {
-  const { filter } = Route.useSearch();
+  const { filter = "all" } = Route.useSearch();
   const [selected, setSelected] = useState<Product | null>(null);
 
   return (
