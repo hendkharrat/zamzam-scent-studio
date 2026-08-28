@@ -1,7 +1,20 @@
-import bottleNavy from "@/assets/bottle-navy.jpg";
-import bottleBurgundy from "@/assets/bottle-burgundy.jpg";
-import bottleIvory from "@/assets/bottle-ivory.jpg";
-import bottleNoir from "@/assets/bottle-noir.jpg";
+/**
+ * Product bottle photography — each image already has the Zam Zam label
+ * printed on the bottle itself, keyed by product slug.
+ */
+const labeledBottles = import.meta.glob("../assets/products/*.jpg", {
+  eager: true,
+  query: "?url",
+  import: "default",
+}) as Record<string, string>;
+
+const bottleBySlug: Record<string, string> = Object.fromEntries(
+  Object.entries(labeledBottles).map(([path, url]) => [
+    path.split("/").pop()!.replace(/\.jpg$/, ""),
+    url,
+  ]),
+);
+
 
 /**
  * Prototype catalogue — static sample data only.
