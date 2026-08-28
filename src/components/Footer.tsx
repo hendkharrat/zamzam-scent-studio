@@ -1,13 +1,18 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram } from "lucide-react";
+import { Instagram, Mail, Phone } from "lucide-react";
 import logo from "@/assets/zamzam-logo.jpg.asset.json";
 import {
   BRAND_LOCATION,
   BRAND_NAME,
   BRAND_TAGLINE,
+  EMAIL_ADDRESS,
+  EMAIL_URL,
   INSTAGRAM_HANDLE,
   INSTAGRAM_URL,
+  WHATSAPP_NUMBER,
+  WHATSAPP_URL,
 } from "@/data/brand";
+
 
 export function Footer() {
   return (
