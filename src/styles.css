@@ -224,41 +224,41 @@
 
 /* Ambient luxury background motion (hero) */
 @keyframes luxe-drift-a {
-  0% { transform: translate3d(-6%, -4%, 0) scale(1); }
-  50% { transform: translate3d(6%, 5%, 0) scale(1.15); }
-  100% { transform: translate3d(-6%, -4%, 0) scale(1); }
+  0% { transform: translate3d(-10%, -7%, 0) scale(1); }
+  50% { transform: translate3d(12%, 9%, 0) scale(1.25); }
+  100% { transform: translate3d(-10%, -7%, 0) scale(1); }
 }
 
 @keyframes luxe-drift-b {
-  0% { transform: translate3d(5%, 6%, 0) scale(1.1); }
-  50% { transform: translate3d(-5%, -6%, 0) scale(1); }
-  100% { transform: translate3d(5%, 6%, 0) scale(1.1); }
+  0% { transform: translate3d(8%, 10%, 0) scale(1.15); }
+  50% { transform: translate3d(-10%, -11%, 0) scale(1); }
+  100% { transform: translate3d(8%, 10%, 0) scale(1.15); }
 }
 
 @keyframes luxe-shimmer {
-  0%, 100% { opacity: 0.18; }
-  50% { opacity: 0.42; }
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 0.65; }
 }
 
 @keyframes luxe-float-up {
-  0% { transform: translate3d(0, 12vh, 0); opacity: 0; }
-  15% { opacity: 0.7; }
-  85% { opacity: 0.5; }
-  100% { transform: translate3d(0, -85vh, 0); opacity: 0; }
+  0% { transform: translate3d(0, 14vh, 0); opacity: 0; }
+  12% { opacity: 0.85; }
+  88% { opacity: 0.55; }
+  100% { transform: translate3d(0, -100vh, 0); opacity: 0; }
 }
 
 @utility ambient-orb-a {
-  animation: luxe-drift-a 34s ease-in-out infinite;
+  animation: luxe-drift-a 24s ease-in-out infinite;
   will-change: transform;
 }
 
 @utility ambient-orb-b {
-  animation: luxe-drift-b 46s ease-in-out infinite;
+  animation: luxe-drift-b 32s ease-in-out infinite;
   will-change: transform;
 }
 
 @utility ambient-rays {
-  animation: luxe-shimmer 18s ease-in-out infinite;
+  animation: luxe-shimmer 12s ease-in-out infinite;
 }
 
 @utility ambient-mote {
