@@ -17,23 +17,31 @@ export function Hero() {
 
       {/* Ambient luxury atmosphere — purely decorative, sits behind content */}
       <div aria-hidden className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-        <div className="ambient-orb-a absolute -top-24 left-[10%] h-[46vmax] w-[46vmax] rounded-full bg-[radial-gradient(circle,oklch(0.79_0.078_82/0.16)_0%,transparent_65%)] blur-3xl" />
-        <div className="ambient-orb-b absolute -bottom-32 right-[5%] h-[52vmax] w-[52vmax] rounded-full bg-[radial-gradient(circle,oklch(0.4_0.13_18/0.22)_0%,transparent_68%)] blur-3xl" />
-        <div className="ambient-orb-a absolute top-1/3 left-1/2 h-[38vmax] w-[38vmax] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,oklch(0.34_0.058_263/0.28)_0%,transparent_70%)] blur-3xl" />
-        <div className="ambient-rays absolute inset-0 bg-[linear-gradient(105deg,transparent_35%,oklch(0.79_0.078_82/0.07)_50%,transparent_65%)]" />
+        <div className="ambient-orb-a absolute -top-24 left-[10%] h-[46vmax] w-[46vmax] rounded-full bg-[radial-gradient(circle,oklch(0.79_0.078_82/0.22)_0%,transparent_65%)] blur-3xl" />
+        <div className="ambient-orb-b absolute -bottom-32 right-[5%] h-[52vmax] w-[52vmax] rounded-full bg-[radial-gradient(circle,oklch(0.4_0.13_18/0.3)_0%,transparent_68%)] blur-3xl" />
+        <div className="ambient-orb-a absolute top-1/3 left-1/2 h-[38vmax] w-[38vmax] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,oklch(0.34_0.058_263/0.35)_0%,transparent_70%)] blur-3xl" />
+        <div className="ambient-orb-b absolute top-2/3 left-[15%] h-[30vmax] w-[30vmax] rounded-full bg-[radial-gradient(circle,oklch(0.79_0.078_82/0.14)_0%,transparent_72%)] blur-3xl" />
+        <div className="ambient-rays absolute inset-0 bg-[linear-gradient(105deg,transparent_32%,oklch(0.79_0.078_82/0.12)_50%,transparent_68%)]" />
         {[
-          { l: "8%", d: 0, u: 26, s: 3 },
-          { l: "21%", d: 6, u: 34, s: 2 },
-          { l: "34%", d: 12, u: 30, s: 4 },
-          { l: "47%", d: 3, u: 38, s: 2 },
-          { l: "59%", d: 16, u: 28, s: 3 },
-          { l: "71%", d: 9, u: 36, s: 2 },
-          { l: "84%", d: 20, u: 32, s: 3 },
-          { l: "93%", d: 14, u: 40, s: 2 },
+          { l: "5%", d: 0, u: 22, s: 3 },
+          { l: "12%", d: 4, u: 30, s: 2 },
+          { l: "21%", d: 6, u: 26, s: 4 },
+          { l: "28%", d: 10, u: 34, s: 2 },
+          { l: "34%", d: 12, u: 24, s: 3 },
+          { l: "41%", d: 2, u: 32, s: 2 },
+          { l: "47%", d: 3, u: 28, s: 4 },
+          { l: "53%", d: 8, u: 36, s: 2 },
+          { l: "59%", d: 16, u: 22, s: 3 },
+          { l: "65%", d: 5, u: 30, s: 2 },
+          { l: "71%", d: 9, u: 26, s: 3 },
+          { l: "78%", d: 14, u: 34, s: 2 },
+          { l: "84%", d: 20, u: 24, s: 3 },
+          { l: "90%", d: 7, u: 32, s: 2 },
+          { l: "96%", d: 14, u: 28, s: 3 },
         ].map((m) => (
           <span
             key={m.l}
-            className="ambient-mote absolute bottom-0 rounded-full bg-gold/70 blur-[1px]"
+            className="ambient-mote absolute bottom-0 rounded-full bg-gold/80 blur-[1px]"
             style={{
               left: m.l,
               width: m.s,
